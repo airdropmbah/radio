@@ -1,0 +1,36 @@
+35.194.74.232
+
+cd /home
+mkdir test
+cd test
+lalu aplt dolder autodj dan radio
+setting permision
+autodj
+sc_tran_linux 777
+sc_trans.conf 777
+radio
+sc_serv 777
+sc_serv.conf 777
+
+aplot lagu ke folder autodj/musik
+
+=======================
+
+masih di direktori test lalu masuk direktori auto dj
+
+cd autodj
+ls
+paste code ini
+
+find /home/test/autodj/Musik -type f -name "*.mp3" > example.lst
+
+edit sc_serv.conf = portbase = 8000
+
+star radio
+buka 2 putty satu untuk jalankan ini
+cd /home/test/radio
+./sc_serv
+
+lalu satu lagi untuk ini
+cd /home/test/autodj
+./sc_trans_linux
